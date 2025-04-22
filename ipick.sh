@@ -22,23 +22,27 @@ ipick() {
       --preview-window 'border-vertical' \
       --preview '
           if [[ {2..} == ".." ]]; then
+            clear
             echo "[Enter = Go, Esc = Quit]"
             echo ""
             echo "$(tput bold)Directory: $(realpath ..)$(tput sgr0)"
             echo ""
             eza -1A --icons=always --no-quotes --color=always .. 
           elif [[ {2..} == "." ]]; then
+            clear
             echo "[Enter = Pick, Esc = Quit]"
             echo ""
             echo "$(tput bold)Directory: $(pwd)$(tput sgr0)"
             echo ""
           elif [[ -d {2..} ]]; then
+            clear
             echo "[Enter = Go, Esc = Quit]"
             echo ""
             echo "$(tput bold)Directory: {2..}$(tput sgr0)"
             echo ""
             eza -1A --icons=always --no-quotes --color=always {2..} 
           else
+            clear
             echo -e "[Enter = Pick, Esc = Select]"
             echo ""
             echo "$(tput bold)File: {2..}$(tput sgr0)"
@@ -46,7 +50,7 @@ ipick() {
             echo "$(file --brief {2..})"
             echo ""
             item=$(echo {2..} | sed '"'"'s/\x1b\[[0-9;]*m//g'"'"')
-            fzf-preview.sh "'"$current_dir"'/$item"
+            /Volumes/Tony/projects/ipick/preview.sh "'"$current_dir"'/$item"
           fi
         '
       )

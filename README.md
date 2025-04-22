@@ -17,6 +17,9 @@ An fzf-based interactive file and directory picker for the command line.
 - [`eza`](https://github.com/eza-community/eza)
 - [`fzf`](https://github.com/junegunn/fzf)
 - [`bat`](https://github.com/sharkdp/bat)
+- [`bat`](https://github.com/sharkdp/bat)
+- [`chafa`](https://github.com/hpjansson/chafa/) (optional, for image preview)
+- [`icat`](https://sw.kovidgoyal.net/kitty/kittens/icat/) (optional, for image preview)
 
 ## Installation
 
